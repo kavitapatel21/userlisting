@@ -8,7 +8,7 @@ Version:    1.0
 License:    GNU General Public License v2 or later
 */
 
-body{
+body {
     background-image: url(bg.jpg);
     background-color: skyblue;
     background-repeat: no-repeat;
@@ -17,60 +17,67 @@ body{
     font-size: 22px;
     color: White;
 }
-.main h1{
-    color: white;
+
+.main h1 {
+    color: #4b4747;
     font-size: 60px;
     font-family: cursive;
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
-.form1{
-    background:rgba(0,0,0,0.6);
+
+.form1 {
+    background: rgba(0, 0, 0, 0.6);
     padding: 24px;
-    margin-top:0px;
+    margin-top: 0px;
     width: 28%;
     position: absolute;
-    left:34%;
+    left: 34%;
     border-radius: 15px;
 }
-input{
+
+input {
     width: 330px;
     height: 30px;
     border-radius: 7px;
     text-align: center;
 }
-input[type="text"]{
+
+input[type="text"] {
     font-size: 18px;
 }
-input[type="email"]{
+
+input[type="email"] {
     font-size: 18px;
 }
-input[type="submit"]{
+
+input[type="submit"] {
     font-size: 20px;
     height: 40px;
     background-color: #00FF7F;
-
 }
 
-input[type="submit"]:hover{
-    color:white;	
-    background-color: blue;	
+input[type="submit"]:hover {
+    color: white;
+    background-color: blue;
 }
-select{
-    size:400px;
+
+select {
+    size: 400px;
     height: 30px;
     width: 252px;
     border-radius: 20px;
     text-align: center;
     font-size: 18px;
 }
-input[type="radio"]
-{
+
+input[type="radio"] {
     font-size: 14px;
     size: 10px;
-    height:12px;
+    height: 12px;
 }
-.sub{
-margin-bottom: 100px;
+
+.sub {
+    margin-bottom: 100px;
 }
+

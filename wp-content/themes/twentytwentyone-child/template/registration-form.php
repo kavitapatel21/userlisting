@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name:   registration-form
  * Template Post Type:post,page,my-post-type;
