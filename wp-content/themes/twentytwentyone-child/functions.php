@@ -96,7 +96,7 @@ function showdata()
                 </tfoot>
         </div>
     </table>
-<?php
+    <?php
     $tag = '<div class="pagination">';
     $tag .= paginate_links(array(
         'base'              => add_query_arg('paged', '%#%'),
@@ -206,3 +206,93 @@ if (array_key_exists('btn-delete', $_POST)) {
     delete();
 }
 
+function weichie_load_more()
+{
+
+    /**$ajaxposts = new WP_Query([
+      'post_type' => 'post',
+      'posts_per_page' => 3,
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'paged' => $_POST['paged'],
+    ]);
+  
+    $response = '';
+  $max_pages = $ajaxposts->max_num_pages;
+
+  if($ajaxposts->have_posts()) {
+    ob_start();
+    while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+       
+        $response .= the_title();
+       
+    endwhile;
+    $output = ob_get_contents();
+    ob_end_clean();
+  } else {
+    $response = '';
+  }
+
+  $result = [
+    'max' => $max_pages,
+    'html' => $output,
+    'paged' => $_POST['paged']
+  ];
+
+  echo json_encode($result);
+  exit;*/
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'category_name' => 'first',
+        'paged' => $_POST['page'],
+    );
+    $loop = new WP_Query($args);
+
+    //$max_pages = $loop->max_num_pages;
+    /**$args = array(
+        'post_type' => 'blog',
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+        'paged' => $_POST['page'],
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'categories',
+                'field'    => 'slug',
+                'terms'    => array( 'firstcat' ),
+            ),
+        ),
+      );
+      
+      $loop = new WP_Query( $args );*/
+    while ($loop->have_posts()) : $loop->the_post();
+    echo get_the_terms( get_the_ID(), 'blog_tags' ); ?>
+    
+
+        <h2><?php echo the_title(); ?></h2>
+        <h3>Tags:<?php $posttags = get_the_tags();
+                    if ($posttags) {
+                        foreach ($posttags as $tag) { ?>
+            <a href="<?= get_tag_link($tag->term_id) ?>">
+                <?= $tag->name ?>
+            </a>
+    <?php }
+                    } ?>
+        </h3>
+        <p><?php echo substr(get_the_content(), 0, 40); ?><a href=<?php the_permalink(); ?> title="read more"><h4>Read More...</h4></a></p>
+        <h3>Author:<?php echo get_field('author'); ?></h3>
+        <?php $url = wp_get_attachment_url(get_post_thumbnail_id($loop->ID)); ?>
+        <img src="<?php echo $url; ?>" alt="Awesome Image">
+
+    <?php
+    endwhile;
+    ?>
+<?php wp_reset_postdata();
+    exit;
+}
+
+add_action('wp_ajax_weichie_load_more', 'weichie_load_more');
+add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more');

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name:  php-form-validation
  * Template Post Type:post,page,my-post-type;
