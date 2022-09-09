@@ -100,6 +100,7 @@
 			});
 		});*/
 
+		//local
 		var page=2;
 		var page_count=jQuery('.publication-list').data('pagecount');
 		$('#load-more').on('click', function() {
@@ -123,6 +124,27 @@
 			});
 		});
 
+
+
+		/**var page=2;
+		var count_page=jQuery('#count-page').data('countpage');
+		$('.btn-load-more').on('click', function() {
+			$.ajax({
+				type: 'POST',
+				url: '<?php echo admin_url('admin-ajax.php'); ?>',
+				data: {
+					action: 'load_more',
+					page: page,
+				},
+				success: function(res) {
+					$('.flex-wrap-wrap').append(res);
+					if(count_page == page){
+						$('.btn-load-more').hide();
+					}
+					page++;
+				}
+			});
+		});*/
 	</script>
 </footer><!-- #colophon -->
 
