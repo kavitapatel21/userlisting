@@ -100,9 +100,9 @@
 			});
 		});*/
 
-		//local
-		var page=2;
-		var page_count=jQuery('.publication-list').data('pagecount');
+		//local--For Load More Post
+		var page = 2;
+		var page_count = jQuery('.publication-list').data('pagecount');
 		$('#load-more').on('click', function() {
 			//alert('here');
 			//currentPage++; // Do currentPage + 1, because we want to load the next page
@@ -115,19 +115,19 @@
 				},
 				success: function(res) {
 					$('.publication-list').append(res);
-					if(page_count == page){
+					if (page_count == page) {
 						$('#load-more').hide();
 					}
 					page++;
 				}
-				
+
 			});
 		});
 
 
-
-		/**var page=2;
-		var count_page=jQuery('#count-page').data('countpage');
+		//for live
+		var page = 2;
+		var count_page = jQuery('#count-page').data('countpage');
 		$('.btn-load-more').on('click', function() {
 			$.ajax({
 				type: 'POST',
@@ -136,15 +136,19 @@
 					action: 'load_more',
 					page: page,
 				},
+				beforeSend: function() {
+					jQuery('#loader').show();
+				},
 				success: function(res) {
 					$('.flex-wrap-wrap').append(res);
-					if(count_page == page){
+					if (count_page == page) {
 						$('.btn-load-more').hide();
 					}
+					jQuery('#loader').hide();
 					page++;
 				}
 			});
-		});*/
+		});
 	</script>
 </footer><!-- #colophon -->
 

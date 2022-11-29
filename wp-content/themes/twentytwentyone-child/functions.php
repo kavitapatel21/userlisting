@@ -302,7 +302,7 @@ add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more');*/
 function load_more_posts(){
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 6,
+        'posts_per_page' => 3,
         'orderby' => 'date',
         'order' => 'DESC',
         'category_name' => 'new',

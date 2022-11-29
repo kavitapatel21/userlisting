@@ -622,7 +622,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 <?php
 /*
- * Template Name: Latest Blog
+ * Template Name: Latest Blogs
  * description: >-
   Page template without sidebar
  */
@@ -774,7 +774,7 @@ get_header();
             <?php
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 6,
+                'posts_per_page' => 3,
                 'orderby' => 'date',
                 'order' => 'DESC',
                 'category_name' => 'new',
@@ -825,200 +825,16 @@ get_header();
             ?>
             <?php wp_reset_postdata(); ?>
 
-            <div class="col-md-12 text-center">
-                <a href="#" class="btn btn-grey btn-load-more">Load more</a>
+           
+        </div>
+        <div class="col-md-12 text-center">
+                <a href="javascript:;" class="btn btn-grey btn-load-more">Load more</a>
             </div>
-        </div>
     </div>
 </div>
+<div id="loader" style="display: none;"><h2>Please Wait....</h2></div>
 
 
-<div class="container-custom mb-60">
-    <div class="row">
-        <div class="col-md-12 page-title-icon">
-            <h2>
-                <i class="fa fa-bookmark-o"></i>
-                Don't miss
-            </h2>
-            Learn how to start a startup and own business
-        </div>
-    </div>
-</div>
-<div class="container-custom mb-60">
-    <div class="row">
-        <div class="col-md-12">
-            <div id="news-slider" class="owl-carousel">
-                <div class="post-slide">
-                    <div class="post-img">
-                        <img src="http://wp.wp-preview.com/saxon/saxon-14/wp-content/uploads/2018/10/saxon-0014-16-555x360.jpg" alt="">
-                        <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                        <div class="latestblog-categories"><a href="">
-                            </a><a href="" class="market">Market</a>
-                            <a href="" class="news">News</a>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <div class="latestblog-post-details">
-                            <h3 class="latestblog-post-title">
-                                <a href="">Buying into the market’s ‘First Five Days of January’ indicator is a mistake</a>
-                            </h3>
-                            <div class="latestblog-post-author">
-                                <div class="latestblog-post-date">
-                                    October 26, 2018
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="post-slide">
-                    <div class="post-img">
-                        <img src="http://wp.wp-preview.com/saxon/saxon-14/wp-content/uploads/2018/10/saxon-0014-14-555x360.jpg" alt="">
-                        <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                        <div class="latestblog-categories"><a href="">
-                            </a><a href="" class="market">Market</a>
-                            <a href="" class="news">News</a>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <div class="latestblog-post-details">
-                            <h3 class="latestblog-post-title">
-                                <a href="">200 Million Reasons Why 3M's Latest Buy Is a Smart Move</a>
-                            </h3>
-                            <div class="latestblog-post-author">
-                                <div class="latestblog-post-date">
-                                    October 26, 2018
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="post-slide">
-                    <div class="post-img">
-                        <img src="http://wp.wp-preview.com/saxon/saxon-14/wp-content/uploads/2018/10/saxon-0014-05-555x360.jpg" alt="">
-                        <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                        <div class="latestblog-categories"><a href="">
-                            </a><a href="" class="market">Market</a>
-                            <a href="" class="news">News</a>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <div class="latestblog-post-details">
-                            <h3 class="latestblog-post-title">
-                                <a href="">200 Million Reasons Why 3M's Latest Buy Is a Smart Move</a>
-                            </h3>
-                            <div class="latestblog-post-author">
-                                <div class="latestblog-post-date">
-                                    October 26, 2018
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="post-slide">
-                    <div class="post-img">
-                        <img src="http://wp.wp-preview.com/saxon/saxon-14/wp-content/uploads/2018/10/saxon-0014-13-1-555x360.jpg" alt="">
-                        <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                        <div class="latestblog-categories"><a href="">
-                            </a><a href="" class="market">Market</a>
-                            <a href="" class="news">News</a>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <div class="latestblog-post-details">
-                            <h3 class="latestblog-post-title">
-                                <a href="">200 Million Reasons Why 3M's Latest Buy Is a Smart Move</a>
-                            </h3>
-                            <div class="latestblog-post-author">
-                                <div class="latestblog-post-date">
-                                    October 26, 2018
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="post-slide">
-                    <div class="post-img">
-                        <img src="http://wp.wp-preview.com/saxon/saxon-14/wp-content/uploads/2018/10/saxon-0014-01-555x360.jpg" alt="">
-                        <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                        <div class="latestblog-categories"><a href="">
-                            </a><a href="" class="market">Market</a>
-                            <a href="" class="news">News</a>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <div class="latestblog-post-details">
-                            <h3 class="latestblog-post-title">
-                                <a href="">200 Million Reasons Why 3M's Latest Buy Is a Smart Move</a>
-                            </h3>
-                            <div class="latestblog-post-author">
-                                <div class="latestblog-post-date">
-                                    October 26, 2018
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="post-slide">
-                    <div class="post-img">
-                        <img src="http://wp.wp-preview.com/saxon/saxon-14/wp-content/uploads/2018/10/saxon-0014-01-555x360.jpg" alt="">
-                        <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                        <div class="latestblog-categories"><a href="">
-                            </a><a href="" class="market">Market</a>
-                            <a href="" class="news">News</a>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <div class="latestblog-post-details">
-                            <h3 class="latestblog-post-title">
-                                <a href="">200 Million Reasons Why 3M's Latest Buy Is a Smart Move</a>
-                            </h3>
-                            <div class="latestblog-post-author">
-                                <div class="latestblog-post-date">
-                                    October 26, 2018
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="full-width-post">
-    <div class="container-custom">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="latestblog-overlay-post">
-                    <div class="latestblog-post-wrapper-inner">
-                        <div class="latestblog-post-image">
-                        </div>
-                        <div class="latestblog-post-details">
-                            <div class="latestblog-categories">
-                                <a href="" class="economic">Economic</a>
-                                <a href="" class="news">News</a>
-                            </div>
-                            <div class="fixed-bottom-text">
-                                <h3 class="latestblog-post-title">
-                                    <a href="">China’s Best 2019 Stock Is Already Up 33% and No One Knows Why</a>
-                                </h3>
-                                <div class="latestblog-post-author">
-                                    <div class="latestblog-post-date">
-                                        October 26, 2018
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <script>
     $(document).ready(function() {
         $("#news-slider").owlCarousel({

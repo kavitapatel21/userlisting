@@ -39,6 +39,7 @@ $loop = new WP_Query($args);
 <div class="publication-list" data-pagecount="<?php echo $loop->max_num_pages; ?>">
   <?php
   while ($loop->have_posts()) : $loop->the_post();
+  
   ?>
 
 
@@ -71,6 +72,8 @@ $loop = new WP_Query($args);
 
       </a></p>
     <h3>Author:<?php echo get_field('author'); ?></h3>
+    <h1>Field Type:<?php echo get_field('custom'); ?></h1>
+    <?php //echo '<div class="service-list-save-work">city:' .$city = the_field('work_city'). '</div>'; ?>
     <?php $url = wp_get_attachment_url(get_post_thumbnail_id($loop->ID)); ?>
     <img src="<?php echo $url; ?>" alt="Awesome Image">
 
